@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-/* import './css/mvp.css'; */
+// import './css/mvp.css';
 import EventForm from "./components/EventForm";
 import EventList from "./components/EventList";
 import EventHome from "./components/EventHome";
