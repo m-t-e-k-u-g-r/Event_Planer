@@ -31,24 +31,25 @@ function EventForm({onAddEvent}) {
         <>
             <h2>Event erfassen</h2>
             <form onSubmit={handleSubmit} style={{marginBottom: "20px"}}>
-                <div>
+                <div className="ps-5">
                     <label>Veranstaltungsname: </label>
                     <input
                         type="text"
                         value={eventName}
                         onChange={(e) => setEventName(e.target.value)}
                         required
+                        className="form-control"
                     />
                 </div>
-                <div>
+                <div className="ps-5">
                     <label>Typ: </label>
-                    <select value={eventType} onChange={(e) => setEventType(e.target.value)}>
+                    <select value={eventType} onChange={(e) => setEventType(e.target.value)} className="form-select">
                         <option value="Meeting">Meeting</option>
                         <option value="Party">Party</option>
                         <option value="Workshop">Workshop</option>
                     </select>
                 </div>
-                <div>
+                <div className="ps-5 my-3">
                     <label>
                         Öffentlich:
                         <input
@@ -58,15 +59,16 @@ function EventForm({onAddEvent}) {
                         />
                     </label>
                 </div>
-                <div>
+                <div className="ps-5">
                     <label>Teilnehmeranzahl: </label>
                     <input
                         type="number"
                         value={participantCount}
                         onChange={(e) => setParticipantCount(e.target.value)}
+                        className="form-control"
                     />
                 </div>
-                <button type="submit">Hinzufügen</button>
+                <button type="submit" className="ms-5 p-2 mt-2 bg-primary border-0 rounded text-white">Hinzufügen</button>
             </form>
         </>
     );
